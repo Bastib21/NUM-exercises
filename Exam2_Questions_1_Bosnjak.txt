@@ -1,0 +1,22 @@
+1) Why is the classical Runge–Kutta (RK4) more precise compared to forward Euler?
+Forward Euler is a 1st order method, meaning error is proportional to step size h. While Runge Kutta is a 4th order method, and the error relates to h^4 (higher precision).
+
+2) What is the goal of a least-squares fit, and under which assumption is it also a maximum likelihood estimator?
+Goal: look for the best-fitting curve to a given set of points by minimizing the sum of the squares of the offsets ("the residuals") of the points from the curve.
+Assumption: the measurement errors are independent and normally distributed with constant standard deviation.
+
+3) In inverse transform sampling, how do you use a uniform random number u ~ U(0,1) to sample from a target PDF p(x).
+By mapping it through the targets inverse cumulative distribution function.
+
+4) Name one key difference between supervised and unsupervised learning.
+supervised: for prediction (labeled input-output pairs to train models to predict future outcomes)
+unsupervised: for exploratory analysis (unlabeled data to discover hidden patterns or structures)
+
+5) What is “burn-in” in an MCMC chain?
+To "burn-in" a chain, we discard the first n samples before we start collecting points. This gives the method time to reach its equilibrium distribution (unlikely, early points would then be presented suitably rare).
+
+6) Why is NumPy vectorization often faster than a Python for-loop for array operations?
+"Vectorization" is the process of rewriting a loop so that instead of processing a single element of an array N times, it processes for example 4 elements of the array simultaneously N/4 times (depends on hardware), while a for loop executes a command one by one.
+
+7) What is the main advantage of the FFT over directly computing the DFT?
+FFT offers higher computational speed due to reducing complexity from O(N^2) to O(N logN), which reduces the amount of necessary calculations.
